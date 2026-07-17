@@ -56,3 +56,4 @@ public/
 1. Run `npm run build`
 2. Go to https://app.netlify.com/drop
 3. Drag the `dist/` folder in — you get a live link instantly.
+"# portfolio" 
