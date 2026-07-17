@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B0764" />
+      <stop offset="100%" stop-color="#1E1B4B" />
+    </linearGradient>
+    <linearGradient id="card4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="20" fill="url(#bg4)" />
+  <circle cx="300" cy="180" r="160" fill="#A855F7" opacity="0.25" filter="blur(35px)" />
+  
+  <rect x="60" y="50" width="480" height="260" rx="16" fill="#18181B" stroke="#581C87" stroke-width="2" />
+  <rect x="60" y="50" width="480" height="42" rx="16" fill="#2E1065" />
+  <circle cx="85" cy="71" r="6" fill="#FB7185" />
+  <circle cx="105" cy="71" r="6" fill="#FBBF24" />
+  <circle cx="125" cy="71" r="6" fill="#34D399" />
+  <text x="300" y="76" font-family="sans-serif" font-size="13" font-weight="600" fill="#E9D5FF" text-anchor="middle">AI Lip Sync Integration Studio — Video Generation</text>
+
+  <!-- Video Player Preview -->
+  <rect x="85" y="110" width="260" height="180" rx="12" fill="#0F172A" />
+  <!-- Avatar Silhouette -->
+  <circle cx="215" cy="170" r="35" fill="url(#card4)" />
+  <path d="M 165 245 Q 215 190, 265 245 Z" fill="url(#card4)" />
+  <rect x="100" y="255" width="230" height="20" rx="6" fill="#1E293B" />
+  <circle cx="115" cy="265" r="5" fill="#EC4899" />
+  <rect x="130" y="263" width="160" height="4" rx="2" fill="#A855F7" />
+
+  <!-- Right AI Audio Waveform Card -->
+  <rect x="365" y="110" width="150" height="180" rx="12" fill="url(#card4)" />
+  <text x="440" y="140" font-family="sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">Audio Sync AI</text>
+  <!-- Soundwave bars -->
+  <rect x="385" y="165" width="8" height="35" rx="4" fill="#FFFFFF" />
+  <rect x="400" y="150" width="8" height="65" rx="4" fill="#FFFFFF" />
+  <rect x="415" y="170" width="8" height="25" rx="4" fill="#FFFFFF" />
+  <rect x="430" y="145" width="8" height="75" rx="4" fill="#FFFFFF" />
+  <rect x="445" y="160" width="8" height="45" rx="4" fill="#FFFFFF" />
+  <rect x="460" y="155" width="8" height="55" rx="4" fill="#FFFFFF" />
+  <rect x="475" y="175" width="8" height="15" rx="4" fill="#FFFFFF" />
+  
+  <rect x="385" y="240" width="110" height="28" rx="14" fill="#FFFFFF" />
+  <text x="440" y="258" font-family="sans-serif" font-size="11" font-weight="800" fill="#7C3AED" text-anchor="middle">Generate Video</text>
+</svg>

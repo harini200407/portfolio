@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" />
+      <stop offset="100%" stop-color="#31106A" />
+    </linearGradient>
+    <linearGradient id="card1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+    <linearGradient id="glow1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="600" height="360" rx="20" fill="url(#bg1)" />
+  <circle cx="500" cy="80" r="140" fill="#7C3AED" opacity="0.25" filter="blur(30px)" />
+  <circle cx="100" cy="280" r="120" fill="#4F46E5" opacity="0.25" filter="blur(30px)" />
+  
+  <!-- Dashboard Window Mockup -->
+  <rect x="60" y="50" width="480" height="260" rx="16" fill="#0F172A" stroke="#334155" stroke-width="2" />
+  <!-- Window Header -->
+  <rect x="60" y="50" width="480" height="40" rx="16" fill="#1E293B" />
+  <circle cx="85" cy="70" r="6" fill="#EF4444" />
+  <circle cx="105" cy="70" r="6" fill="#F59E0B" />
+  <circle cx="125" cy="70" r="6" fill="#10B981" />
+  <text x="300" y="75" font-family="sans-serif" font-size="13" font-weight="600" fill="#94A3B8" text-anchor="middle">padmasini.com/LearnForward — AI EdTech Portal</text>
+
+  <!-- Left Sidebar -->
+  <rect x="75" y="105" width="110" height="185" rx="10" fill="#1E293B" />
+  <rect x="85" y="120" width="70" height="12" rx="6" fill="url(#card1)" />
+  <rect x="85" y="145" width="90" height="8" rx="4" fill="#334155" />
+  <rect x="85" y="165" width="80" height="8" rx="4" fill="#334155" />
+  <rect x="85" y="185" width="85" height="8" rx="4" fill="#334155" />
+  <rect x="85" y="245" width="90" height="30" rx="8" fill="#38BDF8" opacity="0.15" />
+  <text x="130" y="264" font-family="sans-serif" font-size="11" font-weight="700" fill="#38BDF8" text-anchor="middle">AI TUTOR ON</text>
+
+  <!-- Main Analytics Area -->
+  <rect x="200" y="105" width="200" height="85" rx="10" fill="#1E293B" />
+  <text x="215" y="128" font-family="sans-serif" font-size="12" font-weight="600" fill="#94A3B8">Student Learning Progress</text>
+  <!-- Chart lines -->
+  <path d="M 215 170 Q 250 140, 280 155 T 350 130 T 385 125" fill="none" stroke="url(#glow1)" stroke-width="4" stroke-linecap="round" />
+  <circle cx="385" cy="125" r="5" fill="#38BDF8" />
+
+  <!-- Right AI Card -->
+  <rect x="415" y="105" width="110" height="185" rx="10" fill="url(#card1)" opacity="0.9" />
+  <circle cx="470" cy="150" r="28" fill="#FFFFFF" opacity="0.15" />
+  <path d="M 458 150 L 470 138 L 482 150 L 470 162 Z" fill="#FFFFFF" />
+  <text x="470" y="195" font-family="sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">OpenAI</text>
+  <text x="470" y="215" font-family="sans-serif" font-size="10" fill="#E2E8F0" text-anchor="middle">Real-time Analytics</text>
+  <rect x="430" y="235" width="80" height="24" rx="12" fill="#FFFFFF" />
+  <text x="470" y="251" font-family="sans-serif" font-size="11" font-weight="700" fill="#4F46E5" text-anchor="middle">Explore</text>
+
+  <!-- Bottom Cards -->
+  <rect x="200" y="202" width="95" height="88" rx="10" fill="#1E293B" />
+  <text x="215" y="225" font-family="sans-serif" font-size="20" font-weight="800" fill="#10B981">98%</text>
+  <text x="215" y="245" font-family="sans-serif" font-size="11" fill="#94A3B8">Course Completion</text>
+  <rect x="215" y="260" width="65" height="6" rx="3" fill="#10B981" />
+
+  <rect x="305" y="202" width="95" height="88" rx="10" fill="#1E293B" />
+  <text x="320" y="225" font-family="sans-serif" font-size="20" font-weight="800" fill="#F59E0B">4.9/5</text>
+  <text x="320" y="245" font-family="sans-serif" font-size="11" fill="#94A3B8">Student Rating</text>
+  <rect x="320" y="260" width="65" height="6" rx="3" fill="#F59E0B" />
+</svg>

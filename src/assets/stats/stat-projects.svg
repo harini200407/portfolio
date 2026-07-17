@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="s2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB7185" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="85" fill="url(#s2)" opacity="0.15" />
+  <circle cx="100" cy="100" r="65" fill="url(#s2)" />
+  <!-- Rocket / Projects icon -->
+  <path d="M 100 55 C 115 70, 120 90, 120 115 L 100 130 L 80 115 C 80 90, 85 70, 100 55 Z" fill="#FFFFFF" />
+  <circle cx="100" cy="95" r="12" fill="#FB7185" />
+  <path d="M 90 130 L 100 150 L 110 130 Z" fill="#FBBF24" />
+</svg>
