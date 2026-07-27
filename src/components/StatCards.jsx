@@ -39,13 +39,65 @@ const statsData = [
   },
 ]
 
+import { useState, useEffect, useRef } from 'react';
+
+function CountUp({ text }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  
+  // Extract leading numbers and suffix (e.g., "99% Rating" -> 99, "% Rating")
+  const match = text.match(/^(\d+)(.*)$/);
+  const targetNumber = match ? parseInt(match[1], 10) : NaN;
+  const suffix = match ? match[2] : text;
+
+  useEffect(() => {
+    if (isNaN(targetNumber)) return;
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          let startTimestamp = null;
+          const duration = 2000; // 2 seconds animation
+          
+          const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            
+            // easeOutExpo for a smooth slow-down effect
+            const easeOut = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            setCount(Math.floor(easeOut * targetNumber));
+            
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            } else {
+              setCount(targetNumber);
+            }
+          };
+          
+          window.requestAnimationFrame(step);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [targetNumber]);
+
+  if (isNaN(targetNumber)) {
+    return <span ref={ref}>{text}</span>;
+  }
+  
+  return <span ref={ref}>{count}{suffix}</span>;
+}
+
 export default function StatCards() {
   return (
     <section className="stats-section">
       <div className="wrap">
         <div className="stats-grid">
           {statsData.map((s) => {
-            // Fetch dynamically uploaded asset from src/assets/stats/ if present, fallback to default
             const dynamicImg = getStatImage(s.id) || s.defaultImg
             return (
               <div className="stat-card-box" key={s.id}>
@@ -53,7 +105,9 @@ export default function StatCards() {
                   <img src={dynamicImg} alt={s.title} className="stat-img" />
                 </div>
                 <div className="stat-body">
-                  <div className="stat-title">{s.title}</div>
+                  <div className="stat-title">
+                    <CountUp text={s.title} />
+                  </div>
                   <div className="stat-subtitle">{s.subtitle}</div>
                   <p className="stat-desc">{s.desc}</p>
                 </div>

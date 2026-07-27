@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import { FaPaperPlane, FaBars, FaTimes, FaMoon, FaSun, FaUser, FaCode, FaBriefcase, FaStar, FaAward, FaEnvelope } from 'react-icons/fa'
+import { FaPaperPlane, FaBars, FaTimes, FaUser, FaCode, FaBriefcase, FaStar, FaAward, FaEnvelope } from 'react-icons/fa'
+import logoImg from '../assets/logo.png'
+import resumePdf from '../assets/Harini Resume  (2).pdf'
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [theme, setTheme] = useState('dark')
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', 'dark')
@@ -15,18 +16,12 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const toggleTheme = () => {
-    const nextTheme = theme === 'light' ? 'dark' : 'light'
-    setTheme(nextTheme)
-    document.documentElement.setAttribute('data-theme', nextTheme)
-  }
-
   return (
     <>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="wrap nav-wrap">
-          <a href="#home" className="logo">
-            Harini<span>.</span>
+          <a href="#home" className="logo" style={{ display: 'flex', alignItems: 'center' }}>
+            <img src={logoImg} alt="Logo" style={{ height: '40px', width: 'auto' }} />
           </a>
 
           <div className="nav-center">
@@ -46,16 +41,7 @@ export default function Navbar() {
               <span>Available for hire</span>
             </div>
 
-            <button
-              className="theme-toggle-btn"
-              onClick={toggleTheme}
-              aria-label="Toggle theme"
-              title="Toggle theme"
-            >
-              {theme === 'light' ? <FaMoon /> : <FaSun />}
-            </button>
-
-            <a className="btn primary desktop-resume-btn" href="/resume.pdf" download>
+            <a className="btn primary desktop-resume-btn" href={resumePdf} download="Harini_Resume.pdf">
               <FaPaperPlane /> Resume
             </a>
 
@@ -74,7 +60,9 @@ export default function Navbar() {
       <div className={`mobile-overlay ${mobileOpen ? 'open' : ''}`} onClick={() => setMobileOpen(false)} />
       <div className={`mobile-drawer ${mobileOpen ? 'open' : ''}`}>
         <div className="drawer-header">
-          <div className="logo">Harini<span>.</span></div>
+          <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
+            <img src={logoImg} alt="Logo" style={{ height: '40px', width: 'auto' }} />
+          </div>
           <button className="mobile-toggle" onClick={() => setMobileOpen(false)}>
             <FaTimes />
           </button>
@@ -94,7 +82,7 @@ export default function Navbar() {
             <span className="pulse-dot"></span>
             <span>Available for immediate start</span>
           </div>
-          <a className="btn primary drawer-btn" href="/resume.pdf" download onClick={() => setMobileOpen(false)}>
+          <a className="btn primary drawer-btn" href={resumePdf} download="Harini_Resume.pdf" onClick={() => setMobileOpen(false)}>
             <FaPaperPlane /> Download Resume
           </a>
         </div>
